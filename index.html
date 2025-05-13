@@ -13,7 +13,7 @@
         <h2><i class="fas fa-graduation-cap"></i> CampusMate J</h2>
         <nav>
             <ul>
-                <li data-tab="dashboard" class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li data-tab="home" class="active"><i class="fas fa-home"></i> Home</li>
                 <li data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</li>
                 <li data-tab="calendar"><i class="fas fa-calendar-alt"></i> Calendar</li>
                 <li data-tab="grades"><i class="fas fa-file-alt"></i> Grades</li>
@@ -23,12 +23,14 @@
 
     <main class="content">
         <div class="page-wrapper">
-            <section id="dashboard" class="tab active">
-                <div class="dashboard-grid">
-                    <div class="main-cards">
-                        <div class="card welcome">
-                            <h3>Welcome to CampusMate J</h3>
-                            <p>Your dashboard provides a quick overview of your campus activities.</p>
+            <section id="home" class="tab active">
+                <div class="home-grid">
+
+                    <!-- LEFT SIDE: Search + To-Do -->
+                    <div class="home-main">
+                        <div class="card search-bar">
+                            <input type="text" placeholder="Search CampusMate J..." />
+                            <button><i class="fas fa-search"></i></button>
                         </div>
 
                         <div class="card todo-card">
@@ -41,27 +43,37 @@
                         </div>
                     </div>
 
-                    <div class="right-cards">
-                        <div class="card">
-                            <h4>Mini Calendar</h4>
-                            <table class="calendar-preview">
-                                <tr><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td></tr>
-                                <tr><td>6</td><td>7</td><td>8 🧪</td><td>9</td><td>10 📝</td></tr>
-                                <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-                            </table>
+                    <!-- RIGHT SIDE: Info, Schedule, Mail -->
+                    <div class="home-side">
+                        <div class="card student-info">
+                            <h4>👩‍🎓 Student</h4>
+                            <p><strong>Name:</strong> Jane Doe</p>
+                            <p><strong>ID:</strong> 20251234</p>
                         </div>
 
-                        <div class="card">
-                            <h4>Messages</h4>
+                        <div class="card today-schedule">
+                            <h4>📅 Today's Schedule</h4>
+                            <ul class="timeline">
+                                <li><strong>08:00</strong> - Calculus II</li>
+                                <li><strong>10:00</strong> - Modern Art</li>
+                                <li><strong>13:00</strong> - Web Development</li>
+                                <li><strong>16:00</strong> - Group Project Meeting</li>
+                            </ul>
+                        </div>
+
+                        <div class="card mail-preview">
+                            <h4>📬 Inbox</h4>
                             <ul>
-                                <li>📩 Career Fair 2025 registration open</li>
-                                <li>📩 Web Dev results are now posted</li>
-                                <li>📩 Final Exam schedule released</li>
+                                <li>New: Internship opportunity at Google</li>
+                                <li>Reminder: Submit Ethics Essay</li>
+                                <li>Grade posted for History Midterm</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </section>
+
 
             <section id="announcements" class="tab">
                 <div class="card">

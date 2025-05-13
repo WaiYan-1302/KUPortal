@@ -1,0 +1,224 @@
+:root {
+    --background: #ffffff;
+    --text: #333333;
+    --accent: #0077cc;
+    --card-bg: #f9f9f9;
+    --border: #e0e0e0;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+}
+
+.sidebar h2 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    flex: 1;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: var(--text);
+    border-left: 4px solid transparent;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav ul li:hover {
+    background: #eef6fc;
+}
+
+.sidebar nav ul li.active {
+    background: #fff;
+    color: var(--text);
+    border-left: 4px solid var(--accent);
+    margin-right: -20px;
+    padding-right: 30px;
+    box-shadow: 4px 0 6px -4px rgba(0, 0, 0, 0.08);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 10;
+    position: relative;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tab {
+    display: none;
+}
+.tab.active {
+    display: block;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-cards {
+    flex: 2;
+    min-width: 300px;
+}
+.right-cards {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.todo-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+}
+.todo-list li:hover {
+    background: #f0f4f8;
+}
+.todo-list .check {
+    margin-right: 10px;
+}
+.todo-list span:nth-child(2) {
+    flex: 1;
+}
+.status {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.status.done {
+    background: #d4edda;
+    color: #2e7d32;
+}
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+.status.upcoming {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.calendar-preview,
+.course-table,
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.calendar-preview td,
+.course-table td,
+.card table td,
+.course-table th,
+.card table th {
+    border: 1px solid var(--border);
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.legend ul {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+.legend ul li {
+    margin-bottom: 4px;
+}
+
+.register-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.register-btn:hover {
+    background: #005fa3;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

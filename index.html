@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CampusMate J</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <h2><i class="fas fa-graduation-cap"></i> CampusMate J</h2>
+        <nav>
+            <ul>
+                <li data-tab="dashboard" class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</li>
+                <li data-tab="calendar"><i class="fas fa-calendar-alt"></i> Calendar</li>
+                <li data-tab="grades"><i class="fas fa-file-alt"></i> Grades</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-wrapper">
+            <section id="dashboard" class="tab active">
+                <div class="dashboard-grid">
+                    <div class="main-cards">
+                        <div class="card welcome">
+                            <h3>Welcome to CampusMate J</h3>
+                            <p>Your dashboard provides a quick overview of your campus activities.</p>
+                        </div>
+
+                        <div class="card todo-card">
+                            <h4>To-Do List</h4>
+                            <ul class="todo-list">
+                                <li><span class="check">✔️</span><span>Submit Essay on "Digital Culture"</span><span class="status done">Done</span></li>
+                                <li><span class="check">📝</span><span>Start Math Assignment #3</span><span class="status pending">In Progress</span></li>
+                                <li><span class="check">📅</span><span>Prepare for Biology Quiz</span><span class="status upcoming">Upcoming</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="right-cards">
+                        <div class="card">
+                            <h4>Mini Calendar</h4>
+                            <table class="calendar-preview">
+                                <tr><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td></tr>
+                                <tr><td>6</td><td>7</td><td>8 🧪</td><td>9</td><td>10 📝</td></tr>
+                                <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                            </table>
+                        </div>
+
+                        <div class="card">
+                            <h4>Messages</h4>
+                            <ul>
+                                <li>📩 Career Fair 2025 registration open</li>
+                                <li>📩 Web Dev results are now posted</li>
+                                <li>📩 Final Exam schedule released</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="announcements" class="tab">
+                <div class="card">
+                    <h3>Latest Announcements</h3>
+                    <ul>
+                        <li>📢 Campus Wi-Fi upgrade on May 15</li>
+                        <li>📢 New course evaluations now open</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="calendar" class="tab">
+                <div class="card">
+                    <h3>📅 Upcoming Event</h3>
+                    <p><strong>📝 Literature Paper Due</strong> - May 16th, 2025</p>
+                </div>
+
+                <div class="card">
+                    <h3>📆 Monthly Calendar</h3>
+                    <table class="calendar-preview">
+                        <thead>
+                        <tr>
+                            <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                        <tr><td>6</td><td>7</td><td>8 🧪</td><td>9</td><td>10 💻</td></tr>
+                        <tr><td>13</td><td>14</td><td>15</td><td>16 📝</td><td>17</td></tr>
+                        <tr><td>20</td><td>21</td><td>22</td><td>23 💼</td><td>24</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="legend">
+                        <h4>Legend:</h4>
+                        <ul>
+                            <li>🧪 Lab Day</li>
+                            <li>💻 Project Presentation</li>
+                            <li>📝 Assignment Due</li>
+                            <li>💼 Interview Workshop</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="grades" class="tab">
+                <div class="card">
+                    <h3>Course Registration</h3>
+                    <table class="course-table">
+                        <thead>
+                        <tr><th>Course</th><th>Instructor</th><th></th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Advanced AI</td>
+                            <td>Dr. Alan Turing</td>
+                            <td><button class="register-btn">Register</button></td>
+                        </tr>
+                        <tr>
+                            <td>Modern Literature</td>
+                            <td>Dr. Maya Angelou</td>
+                            <td><button class="register-btn">Register</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App Dev</td>
+                            <td>Mr. Elon Musk</td>
+                            <td><button class="register-btn">Register</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Grades Overview</h3>
+                    <table>
+                        <tr><th>Subject</th><th>Grade</th></tr>
+                        <tr><td>Algebra</td><td>A</td></tr>
+                        <tr><td>Biology</td><td>B+</td></tr>
+                        <tr><td>Web Dev</td><td>A-</td></tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

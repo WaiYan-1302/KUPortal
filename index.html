@@ -9,6 +9,8 @@
 </head>
 <body>
 <div class="container">
+
+    <!-- Sidebar -->
     <aside class="sidebar">
         <h2><i class="fas fa-graduation-cap"></i> CampusMate J</h2>
         <nav>
@@ -19,144 +21,142 @@
                 <li data-tab="grades"><i class="fas fa-file-alt"></i> Grades</li>
             </ul>
         </nav>
+
+        <!-- Language Toggle -->
+        <!-- Language Toggle + Settings Button in Sidebar -->
+        <div class="lang-toggle-anchor">
+            <label class="toggle-switch">
+                <input type="checkbox" id="langSwitch">
+                <span class="slider"></span>
+                <div class="lang-labels">
+                    <span>ENG</span>
+                    <span>JPN</span>
+                </div>
+            </label>
+
+            <div class="settings-btn">
+                <button title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+
     </aside>
 
+    <!-- Main Content -->
     <main class="content">
-        <div class="page-wrapper">
-            <section id="home" class="tab active">
-                <div class="home-grid">
+        <section id="home" class="tab active">
+            <div class="home-container">
 
-                    <!-- LEFT SIDE: Search + To-Do -->
-                    <div class="home-main">
-                        <div class="card search-bar">
-                            <input type="text" placeholder="Search CampusMate J..." />
-                            <button><i class="fas fa-search"></i></button>
+                <!-- Left Column -->
+                <div class="home-main">
+                    <div class="page-title">
+                        <h1>HOME</h1>
+                    </div>
+
+                    <div class="card search-bar slim">
+                        <input type="text" placeholder="Search CampusMate J..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="greeting">
+                        <p>Hello, <span class="user-name">Jane Doe</span> 👋</p>
+                    </div>
+
+                    <div class="card mail-section">
+                        <h3>📬 University Mails</h3>
+                        <div class="mail-grid">
+                            <!-- 15 Mail Cards -->
+                            <div class="mail-card"><h4>Internship</h4><p>Summer program at Google...</p></div>
+                            <div class="mail-card"><h4>Exam Alert</h4><p>Check updated exam schedule...</p></div>
+                            <div class="mail-card"><h4>Library</h4><p>Extended hours during finals...</p></div>
+                            <div class="mail-card"><h4>Workshop</h4><p>Join resume-building session...</p></div>
+                            <div class="mail-card"><h4>Advising</h4><p>Book your advising appointment...</p></div>
+                            <div class="mail-card"><h4>Survey</h4><p>5-minute feedback requested...</p></div>
+                            <div class="mail-card"><h4>Clubs</h4><p>Applications now open...</p></div>
+                            <div class="mail-card"><h4>Tuition</h4><p>Second installment due soon...</p></div>
+                            <div class="mail-card"><h4>Volunteering</h4><p>Join our cleanup drive...</p></div>
+                            <div class="mail-card"><h4>Withdrawals</h4><p>Drop deadline is near...</p></div>
+                            <div class="mail-card"><h4>Conference</h4><p>Attend TechEd Virtual 2025...</p></div>
+                            <div class="mail-card"><h4>Lost & Found</h4><p>Claim items at Help Desk...</p></div>
+                            <div class="mail-card"><h4>Mentorship</h4><p>Guide first-years through Connect...</p></div>
+                            <div class="mail-card"><h4>Holiday</h4><p>Campus closed for national day...</p></div>
+                            <div class="mail-card"><h4>Appeals</h4><p>Submit grade appeals by 22nd...</p></div>
                         </div>
 
-                        <div class="card todo-card">
-                            <h4>To-Do List</h4>
-                            <ul class="todo-list">
-                                <li><span class="check">✔️</span><span>Submit Essay on "Digital Culture"</span><span class="status done">Done</span></li>
-                                <li><span class="check">📝</span><span>Start Math Assignment #3</span><span class="status pending">In Progress</span></li>
-                                <li><span class="check">📅</span><span>Prepare for Biology Quiz</span><span class="status upcoming">Upcoming</span></li>
-                            </ul>
+                        <div class="show-more">
+                            <button>Show More Mails</button>
                         </div>
                     </div>
 
-                    <!-- RIGHT SIDE: Info, Schedule, Mail -->
-                    <div class="home-side">
-                        <div class="card student-info">
-                            <h4>👩‍🎓 Student</h4>
-                            <p><strong>Name:</strong> Jane Doe</p>
-                            <p><strong>ID:</strong> 20251234</p>
-                        </div>
+                    <div class="card campus-info">
+                        ⚠️ West Zone Elevator is under maintenance, so it is inaccessible
+                    </div>
+                </div>
 
-                        <div class="card today-schedule">
-                            <h4>📅 Today's Schedule</h4>
-                            <ul class="timeline">
-                                <li><strong>08:00</strong> - Calculus II</li>
-                                <li><strong>10:00</strong> - Modern Art</li>
-                                <li><strong>13:00</strong> - Web Development</li>
-                                <li><strong>16:00</strong> - Group Project Meeting</li>
-                            </ul>
-                        </div>
+                <!-- Right Column -->
+                <div class="home-side">
+                    <div class="card student-info">
+                        <h4>👩‍🎓 Student</h4>
+                        <p><strong>Name:</strong> Jane Doe</p>
+                        <p><strong>ID:</strong> 20251234</p>
+                    </div>
 
-                        <div class="card mail-preview">
-                            <h4>📬 Inbox</h4>
-                            <ul>
-                                <li>New: Internship opportunity at Google</li>
-                                <li>Reminder: Submit Ethics Essay</li>
-                                <li>Grade posted for History Midterm</li>
-                            </ul>
+                    <div class="card today-schedule">
+                        <h4>📅 Today's Schedule</h4>
+                        <div class="schedule-timeline">
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>1st Period</strong>
+                                    <span>8:40 – 10:10</span>
+                                </div>
+                                <div class="class-name">Calculus II</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>2nd Period</strong>
+                                    <span>10:30 – 12:00</span>
+                                </div>
+                                <div class="class-name">Modern Art</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>3rd Period</strong>
+                                    <span>13:00 – 14:30</span>
+                                </div>
+                                <div class="class-name">Web Development</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>4th Period</strong>
+                                    <span>14:50 – 16:20</span>
+                                </div>
+                                <div class="class-name">Group Project</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>5th Period</strong>
+                                    <span>16:40 – 18:10</span>
+                                </div>
+                                <div class="class-name">Free / Self Study</div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </section>
 
-
-            <section id="announcements" class="tab">
-                <div class="card">
-                    <h3>Latest Announcements</h3>
-                    <ul>
-                        <li>📢 Campus Wi-Fi upgrade on May 15</li>
-                        <li>📢 New course evaluations now open</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="calendar" class="tab">
-                <div class="card">
-                    <h3>📅 Upcoming Event</h3>
-                    <p><strong>📝 Literature Paper Due</strong> - May 16th, 2025</p>
-                </div>
-
-                <div class="card">
-                    <h3>📆 Monthly Calendar</h3>
-                    <table class="calendar-preview">
-                        <thead>
-                        <tr>
-                            <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-                        <tr><td>6</td><td>7</td><td>8 🧪</td><td>9</td><td>10 💻</td></tr>
-                        <tr><td>13</td><td>14</td><td>15</td><td>16 📝</td><td>17</td></tr>
-                        <tr><td>20</td><td>21</td><td>22</td><td>23 💼</td><td>24</td></tr>
-                        </tbody>
-                    </table>
-
-                    <div class="legend">
-                        <h4>Legend:</h4>
+                    <div class="card mail-preview">
+                        <h4>📋 Mail Filter</h4>
                         <ul>
-                            <li>🧪 Lab Day</li>
-                            <li>💻 Project Presentation</li>
-                            <li>📝 Assignment Due</li>
-                            <li>💼 Interview Workshop</li>
+                            <li><input type="checkbox" checked> 📧 Exam</li>
+                            <li><input type="checkbox" checked> 📘 Info</li>
+                            <li><input type="checkbox" checked> 📎 Internship</li>
+                            <li><input type="checkbox" checked> 🌍 International</li>
                         </ul>
                     </div>
                 </div>
-            </section>
 
-            <section id="grades" class="tab">
-                <div class="card">
-                    <h3>Course Registration</h3>
-                    <table class="course-table">
-                        <thead>
-                        <tr><th>Course</th><th>Instructor</th><th></th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Advanced AI</td>
-                            <td>Dr. Alan Turing</td>
-                            <td><button class="register-btn">Register</button></td>
-                        </tr>
-                        <tr>
-                            <td>Modern Literature</td>
-                            <td>Dr. Maya Angelou</td>
-                            <td><button class="register-btn">Register</button></td>
-                        </tr>
-                        <tr>
-                            <td>Mobile App Dev</td>
-                            <td>Mr. Elon Musk</td>
-                            <td><button class="register-btn">Register</button></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Grades Overview</h3>
-                    <table>
-                        <tr><th>Subject</th><th>Grade</th></tr>
-                        <tr><td>Algebra</td><td>A</td></tr>
-                        <tr><td>Biology</td><td>B+</td></tr>
-                        <tr><td>Web Dev</td><td>A-</td></tr>
-                    </table>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 </div>
 

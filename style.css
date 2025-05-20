@@ -1,4 +1,13 @@
 /* Reset and Base Styles */
+
+:root {
+    --primary-blue: #004AAD;
+    --highlight-blue: #38B6FF;
+    --text-light: #ecf0f1;
+    --text-dark: #2c3e50;
+    --card-bg: #ffffff;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,7 +41,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(180deg, #2c3e50, #34495e);
+    background: var(--primary-blue);
     color: #ecf0f1;
     padding: 1.5rem 1rem;
     display: flex;
@@ -64,7 +73,7 @@ body {
 
 .sidebar nav ul li.active,
 .sidebar nav ul li:hover {
-    background-color: #1abc9c;
+    background-color: var(--highlight-blue);
     transform: scale(1.05);
 }
 
@@ -237,7 +246,7 @@ body {
 }
 
 .show-more button {
-    background-color: #1abc9c;
+    background-color: var(--highlight-blue);
     color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
@@ -247,7 +256,7 @@ body {
 }
 
 .show-more button:hover {
-    background-color: #16a085;
+    background-color: #2ea5e6;
 }
 
 /* Campus Info */

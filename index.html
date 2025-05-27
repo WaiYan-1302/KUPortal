@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CampusMate J</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2><i class="fas fa-graduation-cap"></i> CampusMate J</h2>
+        <nav>
+            <ul>
+                <li data-tab="home" class="active"><i class="fas fa-home"></i> Home</li>
+                <li data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</li>
+                <li data-tab="syllabus"><i class="fas fa-book-open"></i> Syllabus</li>
+                <li data-tab="grades"><i class="fas fa-file-alt"></i> Grades</li>
+            </ul>
+        </nav>
+
+
+        <!-- Language Toggle -->
+        <!-- Language Toggle + Settings Button in Sidebar -->
+        <div class="lang-toggle-anchor">
+            <label class="toggle-switch">
+                <input type="checkbox" id="langSwitch">
+                <span class="slider"></span>
+                <div class="lang-labels">
+                    <span>ENG</span>
+                    <span>JPN</span>
+                </div>
+            </label>
+
+            <div class="settings-btn">
+                <button title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="home" class="tab active">
+            <div class="home-container">
+
+                <!-- Left Column -->
+                <div class="home-main">
+                    <div class="page-title">
+                        <h1>HOME</h1>
+                    </div>
+
+                    <div class="card search-bar slim">
+                        <input type="text" placeholder="Search CampusMate J..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="greeting">
+                        <p>Hello, <span class="user-name">Kumo Neko</span> 👋</p>
+                    </div>
+
+                    <div class="card mail-section">
+                        <h3>📬 University Mails</h3>
+                        <div class="mail-grid">
+                            <!-- 15 Mail Cards -->
+                            <div class="mail-card"><h4>Library</h4><p>Extended hours during finals...</p></div>
+                            <div class="mail-card"><h4>Workshop</h4><p>Join resume-building session...</p></div>
+                            <div class="mail-card"><h4>Survey</h4><p>5-minute feedback requested...</p></div>
+                            <div class="mail-card"><h4>Clubs</h4><p>Applications now open...</p></div>
+                            <div class="mail-card"><h4>Volunteering</h4><p>Join our cleanup drive...</p></div>
+                            <div class="mail-card"><h4>Withdrawals</h4><p>Drop deadline is near...</p></div>
+                            <div class="mail-card"><h4>Conference</h4><p>Attend TechEd Virtual 2025...</p></div>
+                            <div class="mail-card"><h4>Mentorship</h4><p>Guide first-years through Connect...</p></div>
+                            <div class="mail-card"><h4>Holiday</h4><p>Campus closed for national day...</p></div>
+                        </div>
+
+                        <div class="show-more">
+                            <button>Show More Mails</button>
+                        </div>
+                    </div>
+
+                    <div class="card campus-info">
+                        <span id="campusInfoText">⚠️ West Zone Elevator is under maintenance, so it is inaccessible</span>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="home-side">
+                    <div class="card student-info">
+                        <h4>👩‍🎓 Student</h4>
+                        <p><strong>Name:</strong> Kumo Neko</p>
+                        <p><strong>ID:</strong> 1SI22001A</p>
+                    </div>
+
+                    <div class="card today-schedule">
+                        <h4>📅 Today's Schedule</h4>
+                        <div class="schedule-timeline">
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>1st Period</strong>
+                                    <span>8:40 – 10:10</span>
+                                </div>
+                                <div class="class-name">Calculus II</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>2nd Period</strong>
+                                    <span>10:30 – 12:00</span>
+                                </div>
+                                <div class="class-name">Modern Art</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>3rd Period</strong>
+                                    <span>13:00 – 14:30</span>
+                                </div>
+                                <div class="class-name">Web Development</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>4th Period</strong>
+                                    <span>14:50 – 16:20</span>
+                                </div>
+                                <div class="class-name">Group Project</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>5th Period</strong>
+                                    <span>16:40 – 18:10</span>
+                                </div>
+                                <div class="class-name">Free / Self Study</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card mail-preview">
+                        <h4>📋 Mail Filter</h4>
+                        <ul>
+                            <li><input type="checkbox" checked> 📧 Exam</li>
+                            <li><input type="checkbox" checked> 📘 Info</li>
+                            <li><input type="checkbox" checked> 📎 Internship</li>
+                            <li><input type="checkbox" checked> 🌍 International</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="announcements" class="tab">
+
+            <h2 class="page-heading"> Announcements</h2><br>
+
+            <!-- Filters -->
+            <div class="announcement-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="favorite">Favorite</button>
+                <button class="filter-btn" data-filter="emergency">Emergency</button>
+                <button class="filter-btn" data-filter="class">Class</button>
+                <button class="filter-btn" data-filter="career">Career</button>
+            </div>
+
+            <!-- Announcement List -->
+            <div class="announcement-list">
+                <!-- Repeat this block for each announcement -->
+                <div class="announcement unread" data-type="class">
+                    <span class="badge class">Class</span>
+                    <div class="text">Classroom Change for Monday</div>
+                    <div class="extra">Lorem ipsum dolor sit amet consectetur adipiscing elit...</div>
+                    <span class="star"><i class="far fa-star"></i></span>
+                </div>
+
+                <div class="announcement unread" data-type="career">
+                    <span class="badge career">Career</span>
+                    <div class="text">Job Fair Next Month</div>
+                    <div class="extra">Lorem ipsum dolor sit amet consectetur adipiscing elit...</div>
+                    <span class="star"><i class="far fa-star"></i></span>
+                </div>
+
+                <div class="announcement unread" data-type="emergency">
+                    <span class="badge emergency">Emergency</span>
+                    <div class="text">CampusMate Network Maintenance</div>
+                    <div class="extra">Lorem ipsum dolor sit amet consectetur adipiscing elit...</div>
+                    <span class="star"><i class="far fa-star"></i></span>
+                </div>
+
+                <div class="announcement unread" data-type="class">
+                    <span class="badge class">Class</span>
+                    <div class="text">Lying With Statistics (A Politician’s Guide)</div>
+                    <div class="extra">Registration for this intensive course in Faculty of Politics is open... </div>
+                    <span class="star"><i class="far fa-star"></i></span>
+                </div>
+
+
+
+                <!-- 🔁 Duplicate similar blocks up to 15 rows -->
+                <!-- For demo purposes, I'll fill in the rest with dummy rows below -->
+            </div>
+        </section>
+
+        <section id="syllabus" class="tab">
+            <h2 class="page-heading">📚 Syllabus Search</h2>
+
+            <!-- Search Form -->
+            <div class="card syllabus-form">
+                <form>
+                    <div class="form-row">
+                        <label>Academic Year</label>
+                        <select><option>2025</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Campus</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" /> General</label>
+                            <label><input type="checkbox" /> Medicine</label>
+                            <label><input type="checkbox" /> Dentistry</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Faculty</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" /> Economics</label>
+                            <label><input type="checkbox" /> Science</label>
+                            <label><input type="checkbox" /> Engineering</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Course Title</label>
+                        <input type="text" placeholder="Enter course title..." />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Instructor</label>
+                        <input type="text" placeholder="Instructor name..." />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Semester</label>
+                        <select>
+                            <option>Spring</option>
+                            <option>Fall</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Course Code</label>
+                        <input type="text" placeholder="e.g. ABC-DE123" />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Language</label>
+                        <select>
+                            <option>Japanese</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Schedule (Day/Period)</label>
+                        <div class="time-grid">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Etc</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn reset">Clear</button>
+                        <button type="submit" class="btn submit">Search Syllabus</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Result Section -->
+            <div class="syllabus-results card">
+                <p>2 results found</p>
+
+                <div class="syllabus-card">
+                    <h4>🌍 Global Economics <span class="code">[GEC101]</span></h4>
+                    <p>Instructor: Taro Yamada | Econ Faculty / 2nd year</p>
+                    <p>Mon 2nd | Room A101</p>
+                    <div class="tags"><span>Lecture</span> <span>Macro</span></div>
+                </div>
+
+                <div class="syllabus-card">
+                    <h4>💻 Programming Basics <span class="code">[CS201]</span></h4>
+                    <p>Instructor: Ichiro Suzuki | Info Science / 3rd year</p>
+                    <p>Tue 2nd | Room B203</p>
+                    <div class="tags"><span>Exercise</span> <span>Project</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grades" class="tab">
+            <h2 class="page-heading">🎓 Grades</h2>
+
+            <!-- Summary Boxes -->
+            <div class="grade-summary">
+                <div class="summary-box">
+                    <h3>GPA</h3>
+                    <p class="big-number">3.9</p>
+                </div>
+                <div class="summary-box">
+                    <h3>Total Credits</h3>
+                    <p class="big-number">56</p>
+                </div>
+                <div class="summary-box table-box">
+                    <h3>Grades</h3>
+                    <table>
+                        <thead>
+                        <tr><th>Grade</th><th>Credits</th><th>Total</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>S</td><td>34</td><td>296</td></tr>
+                        <tr><td>A</td><td>8</td><td>24</td></tr>
+                        <tr><td>B</td><td>3</td><td>6</td></tr>
+                        <tr><td>C</td><td>2.5</td><td>2.5</td></tr>
+                        <tr><td>F</td><td>0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Credit Progress -->
+            <div class="card progress-card">
+                <h4>Progress of Credits</h4>
+                <p class="progress-subtext">by July 2025</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 30%"></div>
+                </div>
+                <div class="progress-scale">
+                    <span>50</span>
+                    <span>100</span>
+                    <span>122</span>
+                </div>
+            </div>
+
+            <!-- Course Grades Table -->
+            <div class="card grades-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Semester</th>
+                        <th>Course Title</th>
+                        <th>Professor</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>2023</td><td>Fall</td><td>Calculus II</td><td>WALL DARREN PATRICK</td><td>3</td><td>S</td></tr>
+                    <tr><td>2023</td><td>Fall</td><td>Modern Art</td><td>Prof. Picasso</td><td>2</td><td>A</td></tr>
+                    <tr><td>2023</td><td>Spring</td><td>Web Development</td><td>Ms. Ada</td><td>3</td><td>S</td></tr>
+                    <tr><td>2023</td><td>Fall</td><td>Ethics</td><td>Dr. King</td><td>2.5</td><td>C</td></tr>
+                    <tr><td>2022</td><td>Spring</td><td>Chemistry</td><td>Dr. ROBERTSON</td><td>3</td><td>B</td></tr>
+                    <tr><td>2022</td><td>Spring</td><td>Biology</td><td>Dr. JONES<td>3</td><td>B</td></tr>
+                    <tr><td>2022</td><td>Spring</td><td>Biology</td><td>Dr. JONES<td>3</td><td>B</td></tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

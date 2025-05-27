@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CampusMate J</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2><i class="fas fa-graduation-cap"></i> CampusMate J</h2>
+        <nav>
+            <ul>
+                <li data-tab="home" class="active"><i class="fas fa-home"></i> Home</li>
+                <li data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</li>
+                <li data-tab="syllabus"><i class="fas fa-book-open"></i> Syllabus</li>
+                <li data-tab="grades"><i class="fas fa-file-alt"></i> Grades</li>
+            </ul>
+        </nav>
+
+
+        <!-- Language Toggle -->
+        <!-- Language Toggle + Settings Button in Sidebar -->
+        <div class="lang-toggle-anchor">
+            <label class="toggle-switch">
+                <input type="checkbox" id="langSwitch">
+                <span class="slider"></span>
+                <div class="lang-labels">
+                    <span>ENG</span>
+                    <span>JPN</span>
+                </div>
+            </label>
+
+            <div class="settings-btn">
+                <button title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="home" class="tab active">
+            <div class="home-container">
+
+                <!-- Left Column -->
+                <div class="home-main">
+                    <div class="page-title">
+                        <h1>HOME</h1>
+                    </div>
+
+                    <div class="card search-bar slim">
+                        <input type="text" placeholder="Search CampusMate J..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="greeting">
+                        <p>Hello, <span class="user-name">Jane Doe</span> 👋</p>
+                    </div>
+
+                    <div class="card mail-section">
+                        <h3>📬 University Mails</h3>
+                        <div class="mail-grid">
+                            <!-- 15 Mail Cards -->
+                            <div class="mail-card"><h4>Library</h4><p>Extended hours during finals...</p></div>
+                            <div class="mail-card"><h4>Workshop</h4><p>Join resume-building session...</p></div>
+                            <div class="mail-card"><h4>Survey</h4><p>5-minute feedback requested...</p></div>
+                            <div class="mail-card"><h4>Clubs</h4><p>Applications now open...</p></div>
+                            <div class="mail-card"><h4>Volunteering</h4><p>Join our cleanup drive...</p></div>
+                            <div class="mail-card"><h4>Withdrawals</h4><p>Drop deadline is near...</p></div>
+                            <div class="mail-card"><h4>Conference</h4><p>Attend TechEd Virtual 2025...</p></div>
+                            <div class="mail-card"><h4>Mentorship</h4><p>Guide first-years through Connect...</p></div>
+                            <div class="mail-card"><h4>Holiday</h4><p>Campus closed for national day...</p></div>
+                        </div>
+
+                        <div class="show-more">
+                            <button>Show More Mails</button>
+                        </div>
+                    </div>
+
+                    <div class="card campus-info">
+                        <span id="campusInfoText">⚠️ West Zone Elevator is under maintenance, so it is inaccessible</span>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="home-side">
+                    <div class="card student-info">
+                        <h4>👩‍🎓 Student</h4>
+                        <p><strong>Name:</strong> Jane Doe</p>
+                        <p><strong>ID:</strong> 20251234</p>
+                    </div>
+
+                    <div class="card today-schedule">
+                        <h4>📅 Today's Schedule</h4>
+                        <div class="schedule-timeline">
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>1st Period</strong>
+                                    <span>8:40 – 10:10</span>
+                                </div>
+                                <div class="class-name">Calculus II</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>2nd Period</strong>
+                                    <span>10:30 – 12:00</span>
+                                </div>
+                                <div class="class-name">Modern Art</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>3rd Period</strong>
+                                    <span>13:00 – 14:30</span>
+                                </div>
+                                <div class="class-name">Web Development</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>4th Period</strong>
+                                    <span>14:50 – 16:20</span>
+                                </div>
+                                <div class="class-name">Group Project</div>
+                            </div>
+                            <div class="period">
+                                <div class="time-block">
+                                    <strong>5th Period</strong>
+                                    <span>16:40 – 18:10</span>
+                                </div>
+                                <div class="class-name">Free / Self Study</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card mail-preview">
+                        <h4>📋 Mail Filter</h4>
+                        <ul>
+                            <li><input type="checkbox" checked> 📧 Exam</li>
+                            <li><input type="checkbox" checked> 📘 Info</li>
+                            <li><input type="checkbox" checked> 📎 Internship</li>
+                            <li><input type="checkbox" checked> 🌍 International</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="announcements" class="tab">
+
+
+        </section>
+        <section id="syllabus" class="tab">
+
+
+        </section>
+        <section id="grades" class="tab">
+            <h2 class="page-heading">🎓 Grades</h2>
+
+            <!-- Summary Boxes -->
+            <div class="grade-summary">
+                <div class="summary-box">
+                    <h3>GPA</h3>
+                    <p class="big-number">3.9</p>
+                </div>
+                <div class="summary-box">
+                    <h3>Total Credits</h3>
+                    <p class="big-number">56</p>
+                </div>
+                <div class="summary-box table-box">
+                    <h3>Grades</h3>
+                    <table>
+                        <thead>
+                        <tr><th>Grade</th><th>Credits</th><th>Total</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>S</td><td>34</td><td>296</td></tr>
+                        <tr><td>A</td><td>8</td><td>24</td></tr>
+                        <tr><td>B</td><td>3</td><td>6</td></tr>
+                        <tr><td>C</td><td>2.5</td><td>2.5</td></tr>
+                        <tr><td>F</td><td>0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Credit Progress -->
+            <div class="card progress-card">
+                <h4>Progress of Credits</h4>
+                <p class="progress-subtext">by July 2025</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 30%"></div>
+                </div>
+                <div class="progress-scale">
+                    <span>50</span>
+                    <span>100</span>
+                    <span>122</span>
+                </div>
+            </div>
+
+            <!-- Course Grades Table -->
+            <div class="card grades-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Semester</th>
+                        <th>Course Title</th>
+                        <th>Professor</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>2023</td><td>Fall</td><td>Calculus II</td><td>WALL DARREN PATRICK</td><td>3</td><td>S</td></tr>
+                    <tr><td>2023</td><td>Fall</td><td>Modern Art</td><td>Prof. Picasso</td><td>2</td><td>A</td></tr>
+                    <tr><td>2023</td><td>Spring</td><td>Web Development</td><td>Ms. Ada</td><td>3</td><td>S</td></tr>
+                    <tr><td>2022</td><td>Fall</td><td>Ethics</td><td>Dr. King</td><td>2.5</td><td>C</td></tr>
+                    <tr><td>2022</td><td>Spring</td><td>Chemistry</td><td>Dr. ROBERTSON</td><td>3</td><td>B</td></tr>
+                    <tr><td>2022</td><td>Spring</td><td>Biology</td><td>Dr. Curie</td><td>3</td><td>B</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
